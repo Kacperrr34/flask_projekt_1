@@ -21,13 +21,13 @@ jobs:
           python-version: '3.10' 
 
 
-        - name: Tworzenie i uruchomienie wirtualnego środowiska Python
-          run: 
-            python -m venv venv
-            source venv/bin/activate
+      - name: Tworzenie i uruchomienie wirtualnego środowiska Python
+        run: | 
+          python -m venv venv
+          source venv/bin/activate
 
-          - name: Instalacja dependencji
-            run: pip install -r requirements.txt
+      - name: Instalacja dependencji
+        run: pip install -r requirements.txt
   deploy: 
     runs-on: ubuntu-latest
     needs: [build]
