@@ -22,7 +22,7 @@ jobs:
 
 
       - name: Tworzenie i uruchomienie wirtualnego środowiska Python
-        run: 
+        run: | 
           python -m venv venv
           source venv/bin/activate
 
